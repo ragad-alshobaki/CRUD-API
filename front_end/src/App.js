@@ -9,13 +9,6 @@ function App() {
       <>
         <h1 style={{textAlign: "center"}}>Laravel...API...React CRUD</h1>
         <hr></hr>
-        <div class="spinner-border text-dark" role="status">
-  <span class="sr-only"></span>
-</div><div class="spinner-border text-dark" role="status">
-  <span class="sr-only"></span>
-</div><div class="spinner-border text-dark" role="status">
-  <span class="sr-only"></span>
-</div>
         <Router>
           <Routes>
             <Route exact path="/" element={<Home />}/>

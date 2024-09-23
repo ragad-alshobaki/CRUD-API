@@ -16,18 +16,19 @@ export default function Home() {
             [e.target.name]: e.target.value
         });
         //console.log(userField);
- 
     }
     const [loading,setLoading]=useState()
  
     const onSubmitChange = async (e) => {
         e.preventDefault();
         try {
-            const responce= await axios.post("http://127.0.0.1:8000/api/add_user", userField);
-            console.log(responce)
+            const response= await axios.post("http://127.0.0.1:8000/api/add_user", userField);
+            console.log(response)
+            alert("User Added successfully!")
             setLoading(true);
-        } catch (err) {
+        } catch (error) {
             console.log("Something Wrong");
+            alert("Try again, & Check all fields!")
         }
     }
     if(loading){
@@ -50,7 +51,7 @@ export default function Home() {
                             </div>
                             <div className="mb-3 mt-3">
                                 <label className="form-label">Password:</label>
-                                <input type="text" className="form-control" id="password" placeholder="Enter password" name="password" onChange={e => changeUserFieldHandler(e)} required/>
+                                <input type="password" className="form-control" id="password" placeholder="Enter password" name="password" onChange={e => changeUserFieldHandler(e)} required/>
                             </div>
                              
                             <button type="submit" className="btn btn-primary" onClick={e => onSubmitChange(e)}>Add User</button>

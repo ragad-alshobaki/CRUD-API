@@ -69,7 +69,7 @@ export default function Edit() {
             </form>
             <div className="container d-flex justify-content-center gap-2">
                 <button type="submit" className="btn btn-success" onClick={e=>onSubmit(e)}>Save</button>
-                <button className="btn btn-danger" >Back</button>
+                <button className="btn btn-danger" onClick={()=>navigate('/')}>Back</button>
             </div>
         </div>
     )
