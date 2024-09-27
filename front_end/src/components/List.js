@@ -22,7 +22,8 @@ export default function List() {
 }
     const handleDelete = async(id)=> {
         // console.log(id)
-        await axios.delete("http://127.0.0.1:8000/api/delete_user/"+id)
+        // await axios.delete("http://127.0.0.1:8000/api/delete_user/"+id)
+        await axios.delete(`http://127.0.0.1:8000/api/delete_user/${id}`)
         const newUserData = userData.filter((item)=>{
             return(
                 item.id !==id
