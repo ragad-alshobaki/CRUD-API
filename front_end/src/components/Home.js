@@ -25,6 +25,7 @@ export default function Home() {
             const response= await axios.post("http://127.0.0.1:8000/api/add_user", userField);
             console.log(response)
             alert("User Added successfully!")
+            
             setLoading(true);
         } catch (error) {
             console.log("Something Wrong");
